@@ -1,3 +1,5 @@
 #!/usr/bin/env python
 def calculator(input_argument):
-  return [2.5, 4]
+  average = sum(input_argument) / len(input_argument)
+  maximum = max(input_argument)
+  return [average, maximum]
