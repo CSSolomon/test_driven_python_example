@@ -32,6 +32,12 @@ class Test_Number_Calculator(unittest.TestCase):
     expected_result = None
     returned_result = number_calculator.calculator(input_argument)
     self.assertEquals(expected_result, returned_result)
+
+  def test_three_equals(self):
+    input_argument  = [ 3, 3, 3, 1]
+    expected_result = 3
+    returned_result = number_calculator.calculator(input_argument)
+    self.assertEquals(expected_result, returned_result)
     
 
 unittest.main()
