@@ -20,6 +20,12 @@ class Test_Number_Calculator(unittest.TestCase):
     expected_result = [-5, -2]
     returned_result = number_calculator.calculator(input_argument)
     self.assertEquals(expected_result, returned_result)
+
+  def test_one_negative(self):
+    input_argument  = [ 2, 4, -6, 8]
+    expected_result = None
+    returned_result = number_calculator.calculator(input_argument)
+    self.assertEquals(expected_result, returned_result)
     
 
 unittest.main()
