@@ -12,6 +12,13 @@ def calculator(input_argument):
       is_negative = False
     if not is_negative == are_negatives:
       return None
+  sorted_input_argument = sorted(input_argument)
+
+  if sorted_input_argument[1] == sorted_input_argument[2] == sorted_input_argument[3]:
+    return 3.0 * sorted_input_argument[1] / sorted_input_argument[0]
+  elif sorted_input_argument[0] == sorted_input_argument[1] == sorted_input_argument[2]:
+    return 3.0 * sorted_input_argument[0] / sorted_input_argument[3]
+    
 
   average = 1.0 * sum(input_argument) / len(input_argument)
   maximum = 1.0 * max(input_argument)
