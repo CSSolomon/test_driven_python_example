@@ -29,3 +29,12 @@ def convert_string_to_list_of_numbers(input_string):
   for index, number in enumerate(result):
     result[index] = float(number)
   return result
+
+def main():
+  value_string = raw_input()
+  value_list = convert_string_to_list_of_numbers(value_string)
+  result = calculator(value_list)
+  print result
+
+if __name__ == "__main__":
+  main()
