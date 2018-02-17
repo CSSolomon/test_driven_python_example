@@ -106,4 +106,9 @@ class Test_Number_Calculator(unittest.TestCase):
     with self.assertRaises(ValueError):
       returned_result = number_calculator.calculator(input_argument)
 
+  def test_longer_list_five_values(self):
+    input_argument  = [ 1 , 2, 3, 4, 5]
+    with self.assertRaises(ValueError):
+      returned_result = number_calculator.calculator(input_argument)
+
 unittest.main()
