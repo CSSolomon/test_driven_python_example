@@ -47,8 +47,7 @@ class Test_Number_Calculator(unittest.TestCase):
     
   def test_three_equals_zero_smallest(self):
     input_argument  = [ 3, 3, 3, 0]
-    expected_result = 999
-    returned_result = number_calculator.calculator(input_argument)
-    self.assertEquals(expected_result, returned_result)
+    with self.assertRaises(ZeroDivisionError):
+      returned_result = number_calculator.calculator(input_argument)
 
 unittest.main()
