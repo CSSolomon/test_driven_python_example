@@ -31,7 +31,7 @@ def convert_string_to_list_of_numbers(input_string):
   return result
 
 def main():
-  value_string = raw_input()
+  value_string = raw_input("Please give a list of four numbers, separated by spaces: ")
   value_list = convert_string_to_list_of_numbers(value_string)
   result = calculator(value_list)
   print result
