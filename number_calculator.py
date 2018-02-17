@@ -25,4 +25,7 @@ def calculator(input_argument):
   return [average, maximum]
 
 def convert_string_to_list_of_numbers(input_string):
-  return [1, 2, 3, 4]
+  result = input_string.split()
+  for index, number in enumerate(result):
+    result[index] = float(number)
+  return result
