@@ -57,5 +57,11 @@ class Test_Number_Calculator(unittest.TestCase):
         input_argument)
     self.assertEquals(expected_result, returned_result)
     
+  def test_input_string_to_number_list_two(self):
+    input_argument  = "2 3 4 5"
+    expected_result = [ 2, 3, 4, 5]
+    returned_result = number_calculator.convert_string_to_list_of_numbers(
+        input_argument)
+    self.assertEquals(expected_result, returned_result)
 
 unittest.main()
