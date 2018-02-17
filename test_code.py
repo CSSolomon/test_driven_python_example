@@ -70,4 +70,10 @@ class Test_Number_Calculator(unittest.TestCase):
       returned_result = number_calculator.convert_string_to_list_of_numbers(
           input_argument)
 
+  def test_input_string_to_number_list_invalid_list(self):
+    input_argument  = "2 a 4 5"
+    with self.assertRaises(ValueError):
+      returned_result = number_calculator.convert_string_to_list_of_numbers(
+          input_argument)
+
 unittest.main()
