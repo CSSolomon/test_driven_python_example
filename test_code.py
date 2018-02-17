@@ -1,8 +1,19 @@
 #!/usr/bin/env python
 import unittest
+import mock
 import number_calculator
+import sys
 
 class Test_Number_Calculator(unittest.TestCase):
+  def setUp(self):
+    self.stdout = sys.stdout
+    self.fd = open("/dev/null", "w")
+    sys.stdout = self.fd
+
+  def tearDown(self):
+    sys.stdout = self.stdout
+    self.fd.close()
+
   def test_get_average_of_four(self):
     input_argument  = [ 1, 2, 3, 4]
     expected_result = [2.5, 4]
@@ -75,5 +86,15 @@ class Test_Number_Calculator(unittest.TestCase):
     with self.assertRaises(ValueError):
       returned_result = number_calculator.convert_string_to_list_of_numbers(
           input_argument)
+
+  def test_give_mock_input(self):
+    input_argument  = "2 3 6 5"
+    expected_result = [4, 6]
+    mock_object = mock.Mock(return_value = input_argument)
+    with mock.patch("number_calculator.get_input", mock_object):
+      returned_result = number_calculator.main()
+
+    self.assertEquals(expected_result, returned_result)
+
 
 unittest.main()

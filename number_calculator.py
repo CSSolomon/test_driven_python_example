@@ -38,6 +38,7 @@ def main():
   value_list = convert_string_to_list_of_numbers(value_string)
   result = calculator(value_list)
   print result
+  return result
 
 if __name__ == "__main__":
   main()
