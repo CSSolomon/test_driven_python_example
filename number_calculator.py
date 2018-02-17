@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 def calculator(input_argument):
+  if not len(input_argument) == 4:
+    raise ValueError
+
   if input_argument[0] < 0:
     are_negatives = True 
   else:
