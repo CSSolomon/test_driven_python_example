@@ -96,5 +96,10 @@ class Test_Number_Calculator(unittest.TestCase):
 
     self.assertEquals(expected_result, returned_result)
 
+  def test_shorter_list(self):
+    input_argument  = [ 1, 2, 3]
+    with self.assertRaises(ValueError):
+      returned_result = number_calculator.calculator(input_argument)
+
 
 unittest.main()
